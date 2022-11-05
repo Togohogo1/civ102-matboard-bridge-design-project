@@ -1,5 +1,5 @@
-"hello word"
+"hello word";
 %% 
 
-bruh = [1, 2, 3]
+bruh = [1, 2, 3];
 %% 
