@@ -30,4 +30,5 @@ plot(cumsum(a), "-o")
 %{
 - can we still assume that the distance between the diaphragms is 400 despite the double diaphragm on the left/right end
 - Table 30.2 ea 7, is the vertical direction not supported?
+- is Q(x) the maximum?
 %}
