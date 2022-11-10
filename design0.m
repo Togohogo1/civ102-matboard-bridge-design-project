@@ -30,7 +30,7 @@ plot(cumsum(a), "-o")
 close all;
 clear;
 
-x = 76;
+x = 115;
 
 y_left = (720-x)/3;
 y_right = (x+480)/3;
@@ -65,14 +65,21 @@ moment;
 figure
 plot(x_shear, shear)
 yline(0)
+xlabel("X Values(mm)")
+ylabel("Shear Force(N)")
+title("SFD")
 
 figure
 plot(x_moment, moment)
 yline(0)
+xlabel("X Values(mm)")
+ylabel("BendingMoment(N.mm)")
+title("BMD")
 
 %% Questions
 %{
 - can we still assume that the distance between the diaphragms is 400 despite the double diaphragm on the left/right end
 - Table 30.2 ea 7, is the vertical direction not supported?
 - is Q(x) the maximum?
+- can we just ignore the top flange if we design it out
 %}
