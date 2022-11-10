@@ -26,6 +26,50 @@ plot(a, "-hexagram")
 figure
 plot(cumsum(a), "-o")
 
+%% Design 0
+close all;
+clear;
+
+x = 76;
+
+y_left = (720-x)/3;
+y_right = (x+480)/3;
+
+shear = zeros(1, 16);
+shear(1) = 0;
+shear(16) = 0;
+
+x_shear = [0, 0, x+52, x+52, x+52+176, x+52+176, x+392, x+392, x+568, x+568, x+732, x+732, x+908, x+908, 1200, 1200];
+
+for i = 1:7
+    shear(2*i) = y_left - (200/3)*(i-1);
+    shear(2*i+1) = y_left - (200/3)*(i-1);
+end
+shear;
+
+moment = zeros(1,8);
+
+moment(1) = 0;
+moment(8) = 0;
+
+x_moment = [0, x+52, x+52+176, x+392, x+568, x+732, x+908, 1200];
+
+
+for i = 2:7
+    x_val = (x_shear((i-1)*2+1)) - x_shear((i-1)*2-1);
+    moment(i) = moment(i-1) - (shear((i-1)*2 + 1) * x_val);
+end
+
+moment;
+
+figure
+plot(x_shear, shear)
+yline(0)
+
+figure
+plot(x_moment, moment)
+yline(0)
+
 %% Questions
 %{
 - can we still assume that the distance between the diaphragms is 400 despite the double diaphragm on the left/right end
