@@ -86,4 +86,5 @@ title("Bending Moment Diagram")
 - Table 30.2 ea 7, is the vertical direction not supported?
 - is Q(x) the maximum?
 - can we just ignore the top flange if we design it out
+- is 1 mm increments the typical way that graphs are made
 %}
