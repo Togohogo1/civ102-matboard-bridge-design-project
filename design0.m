@@ -80,6 +80,19 @@ xlabel("Distance Along Bridge (mm)")
 ylabel("Bending Moment (Nmm)")
 title("Bending Moment Diagram")
 
+%% Testing Another BMD
+sfd = [linspace(440, 260, 3000), linspace(60, -60, 2000), linspace(-260, -440, 3000)];
+
+figure
+plot(1:(3000+2000+3000), sfd)
+grid on
+grid minor
+
+figure
+plot(1:3000+2000+3000, cumsum(sfd))
+grid on
+grid minor
+
 %% Questions
 %{
 - can we still assume that the distance between the diaphragms is 400 despite the double diaphragm on the left/right end
