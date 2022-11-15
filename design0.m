@@ -100,4 +100,7 @@ grid minor
 - is Q(x) the maximum?
 - can we just ignore the top flange if we design it out
 - is 1 mm increments the typical way that graphs are made
+
+From previous section:
+- is there vertical and horizontal force in the hinge
 %}
