@@ -96,10 +96,27 @@ grid minor
 %% Questions
 %{
 - can we still assume that the distance between the diaphragms is 400 despite the double diaphragm on the left/right end
+    - yes
 - Table 30.2 ea 7, is the vertical direction not supported?
 - is Q(x) the maximum?
+    - yes, at the centroid, but we need Q(x) at the glue sections as well
 - can we just ignore the top flange if we design it out
 - is 1 mm increments the typical way that graphs are made
+    - it will make our code easier
+- 5 or 6.27 for glue
+    - this is us to us
+- moment of inertia calculations at the diaphragms?
+    - dont need to account for it bc increased moment of inertia benefits
+    us
+- does the hand calculations have to be written
+    - can be typeset
+- b(x) h(x) t(x)
+    - we can split up the bridge into different sections and calculate the
+    dimensions for each of them
+    - then use these dimensions
+- 1200 mm optimal?
+    - raymond said its acceptable, easy to index and stuff, but we'll see,
+    ill think about the piecewise method
 
 From previous section:
 - is there vertical and horizontal force in the hinge
