@@ -1,36 +1,10 @@
-%% Title
+%% Deliverable 1
 
-%% Double Percent for Section Break
-%{
-multiline
-comments
-when
-necessary
-
-to open as live script, right click tab and select open as live script
-- i plan to use comments for inline code notes (i played around with
-converting from live script to .m file with fancy markdown and it didn't
-work as well as expected
-- we will be submitting raw code anyway so editing .m files (and converting
-to .mlx files when necessary) would be more ideal
-%}
-
-% Since this is .m file, outputs to command window
-a = [3 3 3 2 1 0 -1 -2 -2 -2];
-a
-
-% Plots not to command window (hexagram best marker)
-figure
-plot(a, "-hexagram")
-
-figure
-plot(cumsum(a), "-o")
-
-%% Design 0
+%% Code for BMD and SFD
 close all;
 clear;
 
-x = 0;
+x = 0;  % Originally a slider in the .mlx file
 
 y_left = (720-x)/3;
 y_right = (x+480)/3;
@@ -79,45 +53,3 @@ set(gca, 'YDir', 'reverse')  % Flip y-axis
 xlabel("Distance Along Bridge (mm)")
 ylabel("Bending Moment (Nmm)")
 title("Bending Moment Diagram")
-
-%% Testing Another BMD
-sfd = [linspace(440, 260, 3000), linspace(60, -60, 2000), linspace(-260, -440, 3000)];
-
-figure
-plot(1:(3000+2000+3000), sfd)
-grid on
-grid minor
-
-figure
-plot(1:3000+2000+3000, cumsum(sfd))
-grid on
-grid minor
-
-%% Questions
-%{
-- can we still assume that the distance between the diaphragms is 400 despite the double diaphragm on the left/right end
-    - yes
-- Table 30.2 ea 7, is the vertical direction not supported?
-- is Q(x) the maximum?
-    - yes, at the centroid, but we need Q(x) at the glue sections as well
-- can we just ignore the top flange if we design it out
-- is 1 mm increments the typical way that graphs are made
-    - it will make our code easier
-- 5 or 6.27 for glue
-    - this is us to us
-- moment of inertia calculations at the diaphragms?
-    - dont need to account for it bc increased moment of inertia benefits
-    us
-- does the hand calculations have to be written
-    - can be typeset
-- b(x) h(x) t(x)
-    - we can split up the bridge into different sections and calculate the
-    dimensions for each of them
-    - then use these dimensions
-- 1200 mm optimal?
-    - raymond said its acceptable, easy to index and stuff, but we'll see,
-    ill think about the piecewise method
-
-From previous section:
-- is there vertical and horizontal force in the hinge
-%}
