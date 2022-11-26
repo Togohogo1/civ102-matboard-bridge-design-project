@@ -1,10 +1,7 @@
-%% Deliverable 1
-
-%% Code for BMD and SFD
 close all;
 clear;
 
-x = 0;  % Originally a slider in the .mlx file
+x = 0;
 
 y_left = (720-x)/3;
 y_right = (x+480)/3;
