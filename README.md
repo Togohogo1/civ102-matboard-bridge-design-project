@@ -11,3 +11,4 @@ https://github.com/Togohogo1/civ102-matboard-bridge-design-project/tree/c77bd9ed
 
 ### Todo
 - add comments in `design0.m` so I understand what I'm doing
+- credit teammates
